@@ -9,7 +9,9 @@ function App() {
         <Header />
         <Navigation />
         <main>
-            main
+            <div className="bg-amber-400">
+                hello
+            </div>
         </main>
         <Footer />
     </React.Fragment>
