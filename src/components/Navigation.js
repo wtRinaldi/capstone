@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Navigation(props) {
+    const logoHorizontal = require("../assets/images/ll_logo_text_horizontal.png");
 
     const navLinks = [
         {
@@ -30,8 +31,8 @@ function Navigation(props) {
     ]
 
     return (
-        <nav className="flex justify-around">
-            <img src="../logo.svg" alt="Little Lemon logo"/>
+        <nav className="container mx-auto flex justify-between py-4 items-center">
+            <img src={logoHorizontal} alt="Little Lemon logo" height="96" width="175"/>
             <ul className="list-none flex">
                 {navLinks.map(navLink => {
                     return (
@@ -41,7 +42,6 @@ function Navigation(props) {
                     )
                 })}
             </ul>
-
         </nav>
     );
 }
