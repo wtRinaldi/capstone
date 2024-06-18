@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 function Navigation(props) {
     const logoHorizontal = require("../assets/images/ll_logo_text_horizontal.png");
@@ -22,11 +23,11 @@ function Navigation(props) {
         },
         {
             name: 'Order Online',
-            url: '/order-online'
+            url: '/order'
         },
         {
             name: 'Log In',
-            url: '/log-in'
+            url: '/login'
         },
     ]
 
@@ -36,9 +37,9 @@ function Navigation(props) {
             <ul className="list-none flex">
                 {navLinks.map(navLink => {
                     return (
-                        <a href={navLink.url} key={navLink.url} className="pr-4">
+                        <Link to={navLink.url} key={navLink.url} className="pr-4">
                             <li>{navLink.name}</li>
-                        </a>
+                        </Link>
                     )
                 })}
             </ul>
