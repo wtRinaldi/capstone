@@ -11,7 +11,7 @@ import Navigation from "./components/Navigation";
 
 function App() {
     return (
-        <React.Fragment className="App">
+        <div className="App">
             <Navigation/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
@@ -21,7 +21,7 @@ function App() {
                 <Route path="/order" element={<OrderOnline/>}/>
                 <Route path="/login" element={<Login/>}/>
             </Routes>
-        </React.Fragment>
+        </div>
     );
 }
 

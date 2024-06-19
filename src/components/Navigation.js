@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 function Navigation(props) {
-    const logoHorizontal = require("../assets/images/ll_logo_text_horizontal.png");
+    const logoHorizontal = require("../assets/logos/ll_logo_text_horizontal.png");
 
     const navLinks = [
         {
