@@ -14,6 +14,9 @@ function reservationReducer(state, action) {
         case 'occasion': {
             return {...state, occasion: action.payload}
         }
+        case 'reset-form': {
+            return reservationInitialState
+        }
         default:
             return state
     }

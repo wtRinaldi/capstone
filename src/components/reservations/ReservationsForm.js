@@ -18,7 +18,7 @@ function ReservationsForm() {
     function handleSubmit(event) {
         event.preventDefault()
         submitAPI(reservation)
-        console.log('works')
+        dispatchReservation({type: 'reset-form'})
     }
 
     return (
@@ -39,7 +39,7 @@ function ReservationsForm() {
                        onChange={handleChange} required/>
                 <label htmlFor="occasion">Occasion</label>
                 <select id="occasion" value={reservation.occasion} onChange={handleChange} required>
-                    <option></option>
+                    <option value="" disabled defaultValue>Please select an occasion</option>
                     <option>None</option>
                     <option>Birthday</option>
                     <option>Anniversary</option>
