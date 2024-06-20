@@ -1,18 +1,20 @@
-import React, {useEffect, useReducer} from "react";
+import {useEffect, useReducer} from "react";
 
 function availableTimesReducer(state, action) {
     const {type} = action;
 
+    debugger
+
     switch (type) {
         case 'updateTimes':
-            return {...state, date: action.payload}
+            return {...state, times: [...action.payload]}
         default:
             return state
     }
 }
 
 const availableTimesInitialState = {
-    availableTimes: []
+    times: []
 }
 
 const useAvailableTimes = () => {
@@ -20,9 +22,9 @@ const useAvailableTimes = () => {
 
     function initializeTimes() {
         return [
-            {time: '17:00'},
-            {time: '18:00'},
-            {time: '19:00'}
+            {hour: '17:00'},
+            {hour: '18:00'},
+            {hour: '19:00'}
         ]
     }
 
@@ -31,9 +33,11 @@ const useAvailableTimes = () => {
         dispatch({type: 'updateTimes', payload: times})
     }, [])
 
+    // debugger;
+
     return {
-        state: state,
-        dispatch: dispatch
+        availableTimes: state,
+        dispatchAvailableTimes: dispatch
     }
 }
 

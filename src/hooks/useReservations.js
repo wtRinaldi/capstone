@@ -20,18 +20,18 @@ function reservationReducer(state, action) {
 }
 
 const reservationInitialState = {
-    date: null,
-    time: null,
+    date: '',
+    time: '',
     numberOfGuests: 1,
-    occasion: null,
+    occasion: '',
 }
 
 const useReservations = () => {
     const [state, dispatch] = useReducer(reservationReducer, reservationInitialState)
 
     return {
-        state: state,
-        dispatch: dispatch
+        reservation: state,
+        dispatchReservation: dispatch
     }
 }
 
