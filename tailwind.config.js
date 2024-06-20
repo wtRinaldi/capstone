@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: [
@@ -31,7 +30,7 @@ module.exports = {
                 }
             },
             fontFamily: {
-                'markazi': ['"Markazi Text"', ...defaultTheme.fontFamily.sans]
+                markazi: ['"Markazi Text"', "sans"]
             }
         },
     },

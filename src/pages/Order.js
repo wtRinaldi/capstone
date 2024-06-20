@@ -1,9 +1,9 @@
 import React from 'react';
 
-function OrderOnline(props) {
+function Order(props) {
     return (
         <div>Order Online Page</div>
     );
 }
 
-export default OrderOnline;
+export default Order;

@@ -1,8 +1,9 @@
 import React from 'react';
+import ReservationsForm from "../components/reservations/ReservationsForm";
 
 function Reservations(props) {
     return (
-        <div>Reservations page</div>
+        <ReservationsForm/>
     );
 }
 

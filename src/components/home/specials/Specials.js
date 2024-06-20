@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from "../../common/Button";
 import SpecialsCard from "./SpecialsCard";
+import {Link} from "react-router-dom";
 
 function Specials(props) {
     const specials = [
@@ -27,8 +28,10 @@ function Specials(props) {
     return (
         <section className="mt-20 lg:mt-28 container mx-auto">
             <div className="flex justify-between mb-8">
-                <h1 className="text-2xl md:text-4xl font-semibold font-markazi">This weeks specials!</h1>
-                <Button className="bg-primary-light">Online Menu</Button>
+                <h1 className="text-3xl md:text-5xl font-semibold font-markazi">This weeks specials!</h1>
+                <Link to="/menu">
+                    <Button className="bg-primary-light">Online Menu</Button>
+                </Link>
             </div>
             <div className="flex flex-col lg:flex-row justify-between gap-8">
                 {specials.map(special => <SpecialsCard special={special} key={special.name}/>)}

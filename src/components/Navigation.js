@@ -37,8 +37,8 @@ function Navigation(props) {
             <ul className="list-none flex">
                 {navLinks.map(navLink => {
                     return (
-                        <Link to={navLink.url} key={navLink.url} className="pr-4">
-                            <li>{navLink.name}</li>
+                        <Link to={navLink.url} key={navLink.url} className="px-4">
+                            <li className="font-semibold">{navLink.name}</li>
                         </Link>
                     )
                 })}
