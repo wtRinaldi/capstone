@@ -1,7 +1,7 @@
 import React from 'react';
 import ReservationsForm from "../components/reservations/ReservationsForm";
 
-function Reservations(props) {
+function Reservations() {
     return (
         <ReservationsForm/>
     );
