@@ -1,10 +1,8 @@
 import {useEffect, useReducer} from "react";
 
+
 function availableTimesReducer(state, action) {
     const {type} = action;
-
-    debugger
-
     switch (type) {
         case 'updateTimes':
             return {...state, times: [...action.payload]}
@@ -17,19 +15,41 @@ const availableTimesInitialState = {
     times: []
 }
 
+const seededRandom = function (seed) {
+    var m = 2 ** 35 - 31;
+    var a = 185852;
+    var s = seed % m;
+    return function () {
+        return (s = s * a % m) / m;
+    };
+}
+
+const fetchAPI = function (date) {
+    let result = [];
+    let random = seededRandom(date.getDate());
+
+    for (let i = 17; i <= 23; i++) {
+        if (random() < 0.5) {
+            result.push(i + ':00');
+        }
+        if (random() < 0.5) {
+            result.push(i + ':30');
+        }
+    }
+    return result;
+};
+
 const useAvailableTimes = () => {
     const [state, dispatch] = useReducer(availableTimesReducer, availableTimesInitialState)
 
     function initializeTimes() {
-        return [
-            {hour: '17:00'},
-            {hour: '18:00'},
-            {hour: '19:00'}
-        ]
+        return fetchAPI(new Date())
     }
 
     useEffect(() => {
+
         const times = initializeTimes();
+        debugger
         dispatch({type: 'updateTimes', payload: times})
     }, [])
 
