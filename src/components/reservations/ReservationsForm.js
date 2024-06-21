@@ -24,7 +24,7 @@ function ReservationsForm() {
     }
 
     return (
-        <section className="container mx-auto flex justify-center mt-12">
+        <section className="container mx-auto flex justify-center">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-80"
                   data-testid="reservation-form">
                 <Label htmlFor="res-date">Choose date</Label>
@@ -73,7 +73,7 @@ function ReservationsForm() {
                 <Input className="bg-primary-light"
                        type="submit"
                        value="Make Your reservation"
-                       aria-label="On Click"/>
+                       aria-label="Submit Reservation"/>
             </form>
         </section>
     );

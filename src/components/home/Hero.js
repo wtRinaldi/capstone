@@ -16,7 +16,8 @@ function Hero(props) {
                         modern twist.
                     </div>
                     <Link to="/reservations">
-                        <Button className="bg-primary-light">Reserve a Table</Button>
+                        <Button className="bg-primary-light">Reserve a
+                            Table</Button>
                     </Link>
                 </div>
                 <img src={heroImg}

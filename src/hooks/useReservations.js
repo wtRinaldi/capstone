@@ -8,15 +8,12 @@ function reservationReducer(state, action) {
             return {...state, date: action.payload}
         case 'res-time':
             return {...state, time: action.payload}
-        case 'guests': {
+        case 'guests':
             return {...state, numberOfGuests: action.payload}
-        }
-        case 'occasion': {
+        case 'occasion':
             return {...state, occasion: action.payload}
-        }
-        case 'reset-form': {
+        case 'reset-form':
             return reservationInitialState
-        }
         default:
             return state
     }
