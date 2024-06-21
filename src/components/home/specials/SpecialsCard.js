@@ -12,7 +12,7 @@ function SpecialsCard({special}) {
     return (
         <div className="flex flex-col flex-1 bg-gray-100 rounded-2xl">
             <img src={special.image} height="100" alt={special.description}
-                 className="rounded-t-2xl h-64 object-cover"/>
+                 className="rounded-t-2xl max-h-56 object-cover"/>
             <div className="flex-col p-6 h-full">
                 <div className="flex justify-between font-semibold mb-3">
                     <div>{special.name}</div>
